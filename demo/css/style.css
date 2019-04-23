@@ -1,0 +1,30 @@
+/**
+ * X-Ray by Amur
+ * https://github.com/AmurKhoyetsyan/X-Ray
+ */
+
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.container{
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+.x-ray{
+    width: 100%;
+    max-width: 200px;
+}
+.w-100{
+    width: 100%;
+}
+.p-4{
+    padding: 2rem;
+}
+.x-ray-photo-parent > .x-ray-last-photo > .x-ray-last-photo-img-parent{
+    border-color: #ffbf05;
+}
