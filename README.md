@@ -63,7 +63,7 @@
     <!-- add script -->
     <script type="text/javascript" src="js/xray.min.js"></script>
     	or
-    <script type="text/javascript" src="js/xray.min.js"></script>
+    <script type="text/javascript" src="js/xray.js"></script>
 
     <!-- add in your script -->
     window.onload = function(){
