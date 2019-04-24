@@ -51,9 +51,9 @@
 
 	<!-- add style -->
 
-	<link rel="stylesheet" type="text/css" href="css/armxray.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/xray.min.css" />
 		or
-	<link rel="stylesheet" type="text/css" href="css/armxray.css" />
+	<link rel="stylesheet" type="text/css" href="css/xray.css" />
 
 	<!-- images -->
 
