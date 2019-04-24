@@ -4,6 +4,12 @@
  */
 
 class XRay{
+
+    /**
+     * constructor
+     * @param elem
+     */
+
     constructor(elem){
         this.elem = elem;
         // default options
@@ -317,6 +323,11 @@ class XRay{
             addThis.windowResize(elem);
         };
     };
+
+    /**
+     * run X-ray effects
+     * @param option
+     */
 
     run(option = {}){
         if(Object.keys(option).length > 0){
