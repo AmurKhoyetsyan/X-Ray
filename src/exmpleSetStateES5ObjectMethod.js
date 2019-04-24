@@ -21,39 +21,21 @@ Object.prototype.setState = function(option){
 };
 
 var object = {
-    magnifyingGlassBackground: '#00AAFF',
-    typeShow: 'circle',
-    beyondTheBoundary: false,
+    backgroundColor: '#00AAFF',
+    type: 'circle',
+    beyond: false,
     diameter: 50,
-    magnifyingGlassResponsive: false,
-    cursor: true
+    responsive: false,
+    cursor: true,
 };
 
 var state = {
-    magnifyingGlassBackground: 'transparent',
-    typeShow: 'circle',
-    beyondTheBoundary: true,
+    backgroundColor: 'transparent',
+    type: 'circle',
+    beyond: true,
     diameter: 150,
-    magnifyingGlassResponsive: true,
+    responsive: true,
     cursor: false,
-    responsiveDiameter: [
-        {
-            size: 1199,
-            diameter: 130
-        },
-        {
-            size: 991,
-            diameter: 100
-        },
-        {
-            size: 767,
-            diameter: 80
-        },
-        {
-            size: 575,
-            diameter: 50
-        }
-    ]
 };
 
 state.setState(object);

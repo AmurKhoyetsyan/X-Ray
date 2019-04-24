@@ -22,39 +22,21 @@ function setState(option, state){
 }
 
 var object = {
-    magnifyingGlassBackground: '#00AAFF',
-    typeShow: 'circle',
-    beyondTheBoundary: false,
-    diameter: 50,
-    magnifyingGlassResponsive: false,
-    cursor: true
+	backgroundColor: '#00AAFF',
+	type: 'circle',
+	beyond: false,
+	diameter: 50,
+	responsive: false,
+	cursor: true,
 };
 
 var state = {
-    magnifyingGlassBackground: 'transparent',
-    typeShow: 'circle',
-    beyondTheBoundary: true,
-    diameter: 150,
-    magnifyingGlassResponsive: true,
-    cursor: false,
-    responsiveDiameter: [
-        {
-            size: 1199,
-            diameter: 130
-        },
-        {
-            size: 991,
-            diameter: 100
-        },
-        {
-            size: 767,
-            diameter: 80
-        },
-        {
-            size: 575,
-            diameter: 50
-        }
-    ]
+	backgroundColor: 'transparent',
+	type: 'circle',
+	beyond: true,
+	diameter: 150,
+	responsive: true,
+	cursor: false,
 };
 
 setState(object, state);
