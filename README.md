@@ -15,19 +15,19 @@
 		cursor: false,
 		resize: [
 			{
-				size: 1199,
+				screen: 1199,
 				diameter: 130
 			},
 			{
-				size: 991,
+				screen: 991,
 				diameter: 100
 			},
 			{
-				size: 767,
+				screen: 767,
 				diameter: 80
 			},
 			{
-				size: 575,
+				screen: 575,
 				diameter: 50
 			}
 		]
