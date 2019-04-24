@@ -68,6 +68,8 @@
     	or
     <script type="text/javascript" src="js/xray.js"></script>
 
+ ### JavaScript
+
     <!-- add in your script -->
 
     window.onload = function(){
