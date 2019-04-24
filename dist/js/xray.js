@@ -14,27 +14,27 @@ class XRay{
         this.elem = elem;
         // default options
         this.state = {
-            magnifyingGlassBackground: 'transparent',
-            typeShow: 'circle',
-            beyondTheBoundary: true,
+            backgroundColor: 'transparent',
+            type: 'circle',
+            beyond: true,
             diameter: 150,
-            magnifyingGlassResponsive: true,
+            responsive: true,
             cursor: false,
-            responsiveDiameter: [
+            resize: [
                 {
-                    size: 1199,
+                    screen: 1199,
                     diameter: 130
                 },
                 {
-                    size: 991,
+                    screen: 991,
                     diameter: 100
                 },
                 {
-                    size: 767,
+                    screen: 767,
                     diameter: 80
                 },
                 {
-                    size: 575,
+                    screen: 575,
                     diameter: 50
                 }
             ]
@@ -89,10 +89,10 @@ class XRay{
         lastPhoto.classList.add('x-ray-last-photo');
         lastPhoto.classList.add('transform');
         // diameter
-        let {responsiveDiameter, diameter} = this.state;
-        let getMaxResWidth = this.getMaxResponsiveDiameter(responsiveDiameter);
-        let newDiameter = this.matchesWindow(responsiveDiameter);
-        if(this.state.magnifyingGlassResponsive){
+        let {resize, diameter} = this.state;
+        let getMaxResWidth = this.getMaxresize(resize);
+        let newDiameter = this.matchesWindow(resize);
+        if(this.state.responsive){
             if(window.matchMedia(`(min-width: ${getMaxResWidth + 1}px)`).matches){
                 lastPhoto.style.width = `${diameter}px`;
                 lastPhoto.style.height = `${diameter}px`;
@@ -104,12 +104,12 @@ class XRay{
             lastPhoto.style.width = `${diameter}px`;
             lastPhoto.style.height = `${diameter}px`;
         }
-        if(this.state.typeShow === 'magnifyingGlass'){
+        if(this.state.type === 'magnifyingGlass'){
             let handle = document.createElement('div');
             handle.classList.add('magnifyingGlass');
             lastPhoto.appendChild(handle);
         }
-        lastPhoto.style.backgroundColor = this.state.magnifyingGlassBackground;
+        lastPhoto.style.backgroundColor = this.state.backgroundColor;
         // last photo parent
         let lastPhotoParent = document.createElement('div');
         lastPhotoParent.classList.add('x-ray-last-photo-img-parent');
@@ -135,11 +135,11 @@ class XRay{
      * @returns {number|string|Number|*}
      */
 
-    getMaxResponsiveDiameter(diameter){
-        let newDiameter = diameter[0].size;
+    getMaxresize(diameter){
+        let newDiameter = diameter[0].screen;
         for(let i = 0; i < diameter.length; i++){
-            if(diameter[i].size > newDiameter){
-                newDiameter = diameter[i].size;
+            if(diameter[i].screen > newDiameter){
+                newDiameter = diameter[i].screen;
             }
         }
         return newDiameter;
@@ -152,9 +152,9 @@ class XRay{
      */
 
     matchesWindow(diameter){
-        let newDiameter = diameter[0].size;
+        let newDiameter = diameter[0].screen;
         for(let i = 0; i < diameter.length; i++){
-            if(window.matchMedia(`(max-width: ${diameter[i].size}px)`).matches){
+            if(window.matchMedia(`(max-width: ${diameter[i].screen}px)`).matches){
                 newDiameter = diameter[i].diameter;
             }
         }
@@ -172,10 +172,10 @@ class XRay{
         let lastPhotoImages = lastPhoto.getElementsByClassName('x-ray-last-photo-img')[0];
         lastPhotoImages.style.width = `${firstPhoto.clientWidth}px`;
         lastPhotoImages.style.height = `${firstPhoto.clientHeight}px`;
-        let {responsiveDiameter, diameter} = this.state;
-        let getMaxResWidth = this.getMaxResponsiveDiameter(responsiveDiameter);
-        let newDiameter = this.matchesWindow(responsiveDiameter);
-        if(this.state.magnifyingGlassResponsive){
+        let {resize, diameter} = this.state;
+        let getMaxResWidth = this.getMaxresize(resize);
+        let newDiameter = this.matchesWindow(resize);
+        if(this.state.responsive){
             if(window.matchMedia(`(min-width: ${getMaxResWidth + 1}px)`).matches){
                 lastPhoto.style.width = `${diameter}px`;
                 lastPhoto.style.height = `${diameter}px`;
@@ -312,7 +312,7 @@ class XRay{
         window.onmousemove = function(event){
             elem.onmousemove = function(){
                 addThis.removeTransform(elem);
-                if(addThis.state.beyondTheBoundary){
+                if(addThis.state.beyond){
                     addThis.trueHover(event, elem);
                 }else{
                     addThis.falseHover(event, elem);
