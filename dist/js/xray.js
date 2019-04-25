@@ -94,8 +94,8 @@ class XRay{
         let newDiameter = this.matchesWindow(resize);
         if(this.state.responsive){
             if(window.matchMedia(`(min-width: ${getMaxResWidth + 1}px)`).matches){
-                lastPhoto.style.width = `${diameter}px`;
-                lastPhoto.style.height = `${diameter}px`;
+                lastPhoto.style.width = `${(newDiameter > diameter)?(newDiameter):(diameter)}px`;
+                lastPhoto.style.height = `${(newDiameter > diameter)?(newDiameter):(diameter)}px`;
             }else{
                 lastPhoto.style.width = `${newDiameter}px`;
                 lastPhoto.style.height = `${newDiameter}px`;
@@ -152,7 +152,7 @@ class XRay{
      */
 
     matchesWindow(diameter){
-        let newDiameter = diameter[0].screen;
+        let newDiameter = diameter[0].diameter;
         for(let i = 0; i < diameter.length; i++){
             if(window.matchMedia(`(max-width: ${diameter[i].screen}px)`).matches){
                 newDiameter = diameter[i].diameter;
@@ -177,8 +177,8 @@ class XRay{
         let newDiameter = this.matchesWindow(resize);
         if(this.state.responsive){
             if(window.matchMedia(`(min-width: ${getMaxResWidth + 1}px)`).matches){
-                lastPhoto.style.width = `${diameter}px`;
-                lastPhoto.style.height = `${diameter}px`;
+                lastPhoto.style.width = `${(newDiameter > diameter)?(newDiameter):(diameter)}px`;
+                lastPhoto.style.height = `${(newDiameter > diameter)?(newDiameter):(diameter)}px`;
             }else{
                 lastPhoto.style.width = `${newDiameter}px`;
                 lastPhoto.style.height = `${newDiameter}px`;
