@@ -1,0 +1,129 @@
+/**
+ * X-Ray by Amur
+ * https://github.com/AmurKhoyetsyan/X-Ray
+ */
+
+.x-ray-photo-parent {
+    width: 100%;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.cursor-none{
+    cursor: none
+}
+
+.x-ray-photo-parent > .x-ray-first-photo {
+    display: block;
+    width: 100%;
+}
+
+.x-ray-photo-parent > .x-ray-first-photo, .x-ray-photo-parent > .x-ray-last-photo {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.x-ray-photo-parent > .x-ray-last-photo {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 2px solid #000000;
+    top: 2px;
+    left: 2px;
+    margin: -2px;
+    -webkit-transform:  rotate(315deg);
+    -moz-transform:  rotate(315deg);
+    -ms-transform: rotate(315deg);
+    -o-transform:  rotate(315deg);
+    transform:  rotate(315deg);
+}
+
+.x-ray-photo-parent > .x-ray-last-photo.transform{
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) rotate(315deg);
+    -moz-transform: translate(-50%, -50%) rotate(315deg);
+    -ms-transform: translate(-50%, -50%) rotate(315deg);
+    -o-transform: translate(-50%, -50%) rotate(315deg);
+    transform: translate(-50%, -50%) rotate(315deg);
+}
+
+.x-ray-photo-parent > .x-ray-last-photo > .x-ray-last-photo-img-parent {
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #00AAFF;
+    overflow: hidden;
+    position: relative;
+    -webkit-transform:  rotate(45deg);
+    -moz-transform:  rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform:  rotate(45deg);
+    transform:  rotate(45deg);
+}
+
+.x-ray-photo-parent > .x-ray-last-photo > .x-ray-last-photo-img-parent > .x-ray-last-photo-img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.x-ray-photo-parent > .x-ray-last-photo > .x-ray-last-photo-img-parent > .x-ray-last-photo-img.transform{
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+    -moz-transform: translate(-50%, -50%) rotate(360deg);
+    -ms-transform: translate(-50%, -50%) rotate(360deg);
+    -o-transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg);
+}
+
+.x-ray-photo-parent > .x-ray-last-photo > .magnifyingGlass {
+    position: absolute;
+    height: 40%;
+    width: 10%;
+    left: 45%;
+    top: 100%;
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: -webkit-linear-gradient(90deg, #0a0b06, #464644 30%, #595959, #464644 30%, #0a0b06);
+    background: -moz-linear-gradient(90deg, #0a0b06, #464644 30%, #595959, #464644 30%, #0a0b06);
+    background: -ms-linear-gradient(90deg, #0a0b06, #464644 30%, #595959, #464644 30%, #0a0b06);
+    background: -o-linear-gradient(90deg, #0a0b06, #464644 30%, #595959, #464644 30%, #0a0b06);
+    background: linear-gradient(90deg, #0a0b06, #464644 30%, #595959, #464644 30%, #0a0b06);
+}
+
+.x-ray-photo-parent > .x-ray-last-photo {
+    position: absolute;
+}
+
+.x-ray-photo-parent > .x-ray-sensor {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
