@@ -2,7 +2,7 @@
 
 <img src="gif/x-ray.gif" />
 
-## install for React Js npm i reactjs-x-ray
+## install for React Js npm i react-js-x-ray
 
 ## Documentation
 
