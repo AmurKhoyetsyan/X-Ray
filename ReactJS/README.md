@@ -1,8 +1,8 @@
 # X-Ray In JavaScript By Amur
 
-# Install
+## Install
 
-npm i React-XRay
+### npm i reactjs-xray
 
 <img src="../gif/x-ray.gif" />
 
