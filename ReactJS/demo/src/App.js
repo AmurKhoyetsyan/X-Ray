@@ -1,5 +1,5 @@
 import React from 'react';
-import XRay from 'reactjs-x-ray';
+import XRay from 'react-js-x-ray';
 import img1 from './img/1.png';
 import img2 from './img/2.png';
 
