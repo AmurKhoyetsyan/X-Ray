@@ -1,4 +1,4 @@
-# X-Ray In JavaScript By Amur
+# react-js-x-ray
 
 ## Install
 
