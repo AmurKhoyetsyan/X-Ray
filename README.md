@@ -4,7 +4,7 @@
 
 ### npm i react-js-x-ray
 
-<img src="../gif/x-ray.gif" />
+<img src="./gif/x-ray.gif" />
 
 ## Documentation
 
