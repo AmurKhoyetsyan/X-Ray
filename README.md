@@ -10,6 +10,33 @@
 
 ### Default options
 
+| Props            |  Value         |
+| ---------------- | ---------------|
+| backgroundColor  | "transparent"  |
+| type             | "circle"       |
+| beyond           | false          |
+| diameter         | 150            |
+| responsive       | false          |
+| cursor           | true           |
+| resize           | [
+        {
+            screen: 1199,
+            diameter: 130
+        },
+        {
+            screen: 991,
+            diameter: 100
+        },
+        {
+            screen: 767,
+            diameter: 80
+        },
+        {
+            screen: 575,
+            diameter: 50
+        }
+    ] |
+
     backgroundColor={'transparent'}
     beyond={false}
     diameter={150}
