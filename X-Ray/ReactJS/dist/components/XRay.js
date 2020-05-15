@@ -39,10 +39,47 @@ export default class XRay extends Component {
 
         _defineProperty(this, "updateWidthHeight", () => {
             let {
-                beyond
+                firstImage,
+                lastImage
             } = this.state;
 
-            this.firstImg.onload = () => {
+            if(!firstImage && !lastImage){
+                this.loadImages(this.firstImg).then(()=>{
+                    this.setState({firstImage: true});
+                    this.loadImages(this.lastImg).then(()=>{
+                        this.setState({lastImage: true});
+                        this.updateResize();
+                    }).catch((error)=>{
+                        console.log('error', error);
+                    });
+                }).catch((error)=>{
+                    console.log('error', error);
+                });
+            }else{
+                this.updateResize();
+            }
+        });
+
+        _defineProperty(this, 'loadImages', (img) => {
+            return new Promise(function(resolve, reject){
+                img.onload = (e) => {
+                    resolve(img);
+                };
+
+                img.onerror = (e)=> {
+                    reject(new Error(`Failed to load image's URL: ${url}`));
+                };
+            });
+        });
+
+        _defineProperty(this, 'updateResize', () => {
+            let {
+                beyond,
+                firstImage,
+                lastImage
+            } = this.state;
+
+            if(firstImage && lastImage){
                 let naturalWidth = this.firstImg.naturalWidth;
                 let naturalHeight = this.firstImg.naturalHeight;
                 let percent = naturalWidth / naturalHeight;
@@ -73,7 +110,7 @@ export default class XRay extends Component {
                     dim,
                     sensor
                 });
-            };
+            }
         });
 
         _defineProperty(this, "getMaxResize", diameter => {
@@ -161,6 +198,8 @@ export default class XRay extends Component {
         });
 
         this.state = {
+            firstImage: false,
+            lastImage: false,
             backgroundColor: this.props.backgroundColor || 'transparent',
             transform: true,
             images: this.props.images,
